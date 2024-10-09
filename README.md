@@ -4,12 +4,12 @@ ChatGSPP EE is an ExpressionEngine add-on that inserts a chatbox interface for C
 
 ChatGSPP EE is built on top of the [PrivateGPT SDK Demo App](https://github.com/frgarciames/privategpt-react), which utilizes the PrivateGPT Web SDK.
 
-# Installation
+## Installation
 
 1. Add `system/user/chat-gspp` to your add-on folder.
 2. Add `themes/user/chat-gspp` to your themes folder.
 
-# Development
+## Development
 
 1. Navigate to resources.
 
@@ -44,7 +44,7 @@ ChatGSPP EE is built on top of the [PrivateGPT SDK Demo App](https://github.com/
    ```
 
    
-# TODO
+## TODO
 
 - [ ] Create template tags to render JavaScript and React root div.
    - Will need to implement something like this: [Vite Backend Integration](https://vite.dev/guide/backend-integration)
