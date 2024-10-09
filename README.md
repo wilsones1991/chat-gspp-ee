@@ -27,4 +27,24 @@ ChatGSPP EE is built on top of the [PrivateGPT SDK Demo App](https://github.com/
    ```
    pnpm dev
    ```
+
+5. Add development assets to html head.
+
+   ```
+      <script type="module">
+       import RefreshRuntime from 'http://localhost:5173/@react-refresh'
+       RefreshRuntime.injectIntoGlobalHook(window)
+       window.$RefreshReg$ = () => {}
+       window.$RefreshSig$ = () => (type) => type
+       window.__vite_plugin_react_preamble_installed__ = true
+     </script>
+     <script type="module" src="http://localhost:5173/@vite/client"></script>
+     <script type="module" src="http://localhost:5173/src/main.tsx"></script> 
+     <link rel="stylesheet" href="/assets/css/base-accessibility-updates.css?v={gv_cachebreaker}12">
+   ```
+
    
+# TODO
+
+- [ ] Create template tags to render JavaScript and React root div.
+   - Will need to implement something like this: [Vite Backend Integration](https://vite.dev/guide/backend-integration)
