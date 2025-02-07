@@ -8,7 +8,7 @@ use ExpressionEngine\Service\Addon\Installer;
 
 class Chat_gspp_upd extends Installer
 {
-    public $has_cp_backend = 'n';
+    public $has_cp_backend = 'y';
     public $has_publish_fields = 'n';
 
     public function install()
