@@ -7,7 +7,7 @@ export default defineConfig({
     // generate .vite/manifest.json in outDir
     emptyOutDir: true,
     manifest: true,
-    outDir: path.resolve(__dirname, "../themes/user/chat_gspp/"),
+    outDir: path.resolve(__dirname, "../themes/user/chat-gspp/"),
     rollupOptions: {
       // overwrite default .html entry
       input: '/src/main.tsx',
