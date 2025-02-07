@@ -1,39 +1,47 @@
 {
-  "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js": {
-    "file": "assets/index-kgvMsEMM.js",
+  "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js": {
+    "file": "assets/index-U1Q1Qm9-.js",
     "name": "index",
-    "src": "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
+    "src": "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
     "isDynamicEntry": true,
     "imports": [
       "src/main.tsx"
     ]
   },
+  "src/assets/chatgspp-icon.png": {
+    "file": "assets/chatgspp-icon-Cx9bKNPs.png",
+    "src": "src/assets/chatgspp-icon.png"
+  },
   "src/main.tsx": {
-    "file": "assets/main-DH9gRidc.js",
+    "file": "assets/main-DQK_nLpU.js",
     "name": "main",
     "src": "src/main.tsx",
     "isEntry": true,
     "dynamicImports": [
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js",
-      "node_modules/.pnpm/privategpt-sdk-utils@0.1.1/node_modules/privategpt-sdk-utils/serialization/index.js"
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js",
+      "node_modules/.pnpm/privategpt-sdk-utils@0.1.4/node_modules/privategpt-sdk-utils/serialization/index.js"
     ],
     "css": [
-      "assets/main-Dd7oTKKD.css"
+      "assets/main-Caz6eXNm.css"
+    ],
+    "assets": [
+      "assets/chatgspp-icon-Cx9bKNPs.png"
     ]
   }
 }
