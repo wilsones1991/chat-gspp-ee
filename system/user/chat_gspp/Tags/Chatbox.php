@@ -12,7 +12,12 @@ class Chatbox extends AbstractRoute
     // Example tag: {exp:chat_gspp:chatbox}
     public function process()
     {
-        
+        $config = ee('chat_gspp:Config');
+
+        if (!$config->chatGsppEnabled) {
+            return '';
+        }
+
         // // Load manifest.json file
         $manifest = $this->readManifest();
 
