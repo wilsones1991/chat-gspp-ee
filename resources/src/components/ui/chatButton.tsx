@@ -1,4 +1,4 @@
-import chatGsppIcon from '../../assets/chatgspp-icon.svg'
+import chatGsppIcon from '../../assets/chatgspp-icon.png';
 
 function ChatButton({...props}) {
   return (
