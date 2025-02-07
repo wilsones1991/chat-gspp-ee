@@ -1,10 +1,10 @@
 import { Chat } from '@/components/chat';
 import { checkIsPgptHealthy } from '@/lib/pgpt';
 import { useEffect } from 'react';
-import { useLocalStorage } from 'usehooks-ts';
+import { useSessionStorage } from 'usehooks-ts';
 
 export const RootPage = () => {
-  const [environment, setEnvironment, deleteEnvironment] = useLocalStorage<
+  const [environment, setEnvironment, deleteEnvironment] = useSessionStorage<
     string | undefined
   >('pgpt-url', undefined);
 
@@ -26,7 +26,7 @@ export const RootPage = () => {
 
   useEffect(() => {
     if (!environment) {
-        const url = 'http://localhost:8001';
+        const url = 'https://gspp-ai.gspp.berkeley.edu';
         setEnvironment(url);
         checkPrivateGptHealth(url);
     } else {

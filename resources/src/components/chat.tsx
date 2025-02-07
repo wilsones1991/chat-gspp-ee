@@ -8,7 +8,7 @@ import { PrivategptClient } from '@/lib/pgpt';
 import { Textarea } from '@/components/ui/textarea';
 import { cn, transformToUrl } from '@/lib/utils';
 import { marked } from 'marked';
-import { useLocalStorage } from 'usehooks-ts';
+import { useSessionStorage } from 'usehooks-ts';
 import { Button } from './ui/button';
 import { ChatButton } from './ui/chatButton';
 import { StopCircle } from 'lucide-react';
@@ -48,26 +48,26 @@ export function Chat() {
   };
 
   const messageRef = useRef<HTMLTextAreaElement>(null);
-  const [mode] = useLocalStorage<(typeof MODES)[number]['value']>(
+  const [mode] = useSessionStorage<(typeof MODES)[number]['value']>(
     'pgpt-chat-mode',
     'query',
   );
 
-  const [environment] = useLocalStorage('pgpt-url', '');
-  const [input, setInput] = useLocalStorage('input', '');
-  const [systemPrompt] = useLocalStorage<string>(
+  const [environment] = useSessionStorage('pgpt-url', '');
+  const [input, setInput] = useSessionStorage('input', '');
+  const [systemPrompt] = useSessionStorage<string>(
     'system-prompt',
     ``,
   );
 
-  const [messages, setMessages, clearChat] = useLocalStorage<
+  const [messages, setMessages, clearChat] = useSessionStorage<
     Array<
       PrivategptApi.OpenAiMessage & {
         sources?: PrivategptApi.Chunk[];
       }
     >
   >('messages', []);
-  const [selectedFiles] = useLocalStorage<string[]>(
+  const [selectedFiles] = useSessionStorage<string[]>(
     'selected-files',
     [],
   );
@@ -146,12 +146,11 @@ export function Chat() {
 
   useEffect(() => {
     // Add message with role of assistant to start the conversation
-      if (messages.length === 0) {
+    if (messages.length === 0) {
         addMessage({
           role: 'assistant',
-          content: `Hello! My name is ChatGSPP, and I'm here to help you with your questions. 
-Feel free to ask me anything. I can assist you with a variety of topics, 
-including admissions, courses, faculty, and more.
+          content: `Hello! My name is ChatGSPP, and I'm here to help you with your questions related to the Goldman School of Public Policy (GSPP) website.
+Feel free to ask me anything about the GSPP website, including admissions, courses, faculty, and more. 
 
 **Please note that I am an experimental language model AI and may not get everything right.**
 Always verify the information I provide with official sources.
@@ -164,7 +163,7 @@ Please type your question below and I'll do my best to help you.`,
 
   return (
         <div className="twp">
-          <div className="fixed bottom-20 right-4 w-full max-w-sm max-h-[500px] mx-auto overflow-y-auto bg-white rounded-xl shadow-gspp z-[1000]" ref={scrollRef}>
+          <div className="fixed bottom-20 right-4 w-11/12 max-w-md max-h-[600px] mx-auto overflow-y-auto bg-white rounded-xl shadow-gspp z-[1000]" ref={scrollRef}>
             {isVisible && (
             <div className="relative flex-col flex h-full space-y-4 rounded-xl bg-muted/50 p-4 lg:col-span-2">
               <div className="flex-1">
@@ -234,20 +233,20 @@ Please type your question below and I'll do my best to help you.`,
                   disabled={isLoading}
                   id="message"
                   placeholder="Type your message here..."
-                  className="min-h-12 resize-none border bg-background focus-within:ring-1 focus-within:ring-ring p-3 shadow-none focus-visible:ring-0"
+                  className="text-base min-h-12 resize-none border bg-background focus-within:ring-1 focus-within:ring-ring p-3 shadow-none focus-visible:ring-0"
                   value={input}
                   name="content"
                   onKeyDown={(event) => {
                     if (event.key === 'Enter' && !event.shiftKey) {
                       event.preventDefault();
                       event.currentTarget.form?.dispatchEvent(
-                        new Event('submit', { bubbles: true }),
+                        new Event('submit', { bubbles: true, cancelable: true }),
                       );
                     }
-                  }}
-                  autoFocus
-                  onChange={(event) => setInput(event.target.value)}
-                />
+                    }}
+                    onChange={(event) => setInput(event.target.value)}
+                    autoFocus={window.innerWidth > 768}
+                  />
                 <div className="flex flex-wrap items-center pt-3">
                   {isLoading ? (
                     <Button

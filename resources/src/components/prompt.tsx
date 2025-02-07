@@ -25,7 +25,7 @@ import { PrivategptClient } from '@/lib/pgpt';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
 import { marked } from 'marked';
-import { useLocalStorage } from 'usehooks-ts';
+import { useSessionStorage } from 'usehooks-ts';
 
 const MODES = [
   {
@@ -48,22 +48,22 @@ const MODES = [
 
 export function Prompt() {
   const messageRef = useRef<HTMLTextAreaElement>(null);
-  const [mode, setMode] = useLocalStorage<(typeof MODES)[number]['value']>(
+  const [mode, setMode] = useSessionStorage<(typeof MODES)[number]['value']>(
     'pgpt-prompt-mode',
     'prompt',
   );
-  const [sources, setSources] = useLocalStorage(
+  const [sources, setSources] = useSessionStorage(
     'pgpt-sources',
     [] as PrivategptApi.Chunk[],
   );
-  const [environment] = useLocalStorage('pgpt-url', '');
+  const [environment] = useSessionStorage('pgpt-url', '');
   const [input, setInput] = useState('');
   const [prompt, setPrompt] = useState<string>('');
-  const [systemPrompt, setSystemPrompt] = useLocalStorage<string>(
+  const [systemPrompt, setSystemPrompt] = useSessionStorage<string>(
     'system-prompt',
     '',
   );
-  const [selectedFiles, setSelectedFiles] = useLocalStorage<string[]>(
+  const [selectedFiles, setSelectedFiles] = useSessionStorage<string[]>(
     'selected-files',
     [],
   );
