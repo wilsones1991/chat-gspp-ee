@@ -49,3 +49,4 @@ ChatGSPP EE is built on top of the [PrivateGPT SDK Demo App](https://github.com/
 - [ ] Add settings
    - [ ] PrivateGPT API Endpoint
    - [ ] Styling
+- [ ] Handle links when page no longer exists
