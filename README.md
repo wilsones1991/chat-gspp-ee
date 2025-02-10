@@ -46,8 +46,6 @@ ChatGSPP EE is built on top of the [PrivateGPT SDK Demo App](https://github.com/
    
 ## TODO
 
-- [ ] Create template tags to render JavaScript and React root div.
-   - Will need to implement something like this: [Vite Backend Integration](https://vite.dev/guide/backend-integration)
 - [ ] Add settings
    - [ ] PrivateGPT API Endpoint
-   - [ ] Styling?
+   - [ ] Styling
