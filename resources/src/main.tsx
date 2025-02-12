@@ -1,3 +1,8 @@
+
+// Asynchronous iteration is not yet implemented by all browsers, notably Safari.
+// This polyfill adds support for async iteration on ReadableStream.
+// https://developer.mozilla.org/en-US/docs/Web/API/ReadableStream#browser_compatibility
+
 if (!ReadableStream.prototype[Symbol.asyncIterator]) {
     ReadableStream.prototype[Symbol.asyncIterator] = async function* () {
         const reader = this.getReader();
